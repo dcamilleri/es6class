@@ -1,0 +1,25 @@
+{
+  "name": "classgen",
+  "version": "0.0.0",
+  "description": "ES6 Command Line Class Generator",
+  "preferGlobal": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Dorian Camilleri",
+  "license": "ISC",
+  "bin": {
+    "classgen": "index.js"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "gulp-ext-replace": "^0.2.0",
+    "minimist": "^1.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
