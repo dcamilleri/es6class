@@ -1,20 +1,20 @@
+var methodPrefixer = require('./utils/method-prefixer');
+
 module.exports = function(options) {
 
-    console.log("options.methods",options.methods);
-
-    var name    = options.name,
+    let name    = options.name,
         extd    = options.extends ? 'extends ' + options.extends : '',
         methods = options.methods ? generateMethods(options.methods) : '';
 
-        console.log("methods",methods);
-
     function generateMethods(methods) {
 
-        var methodsString = '';
+        let methodsString = '';
 
-        for (var i = 0; i < methods.length; i++) {
+        for( let methodName of methods ) {
 
-            methodsString += '\n\n    ' + methods[i] + '() {\n\n    }';
+            methodName = methodPrefixer(methodName, ['static', 'get', 'set']);
+
+            methodsString += '\n\n    ' + methodName + '() {\n\n    }';
         }
 
         return methodsString;

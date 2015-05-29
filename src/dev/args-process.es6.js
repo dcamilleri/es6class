@@ -1,6 +1,6 @@
 module.exports = function(userArgs) {
 
-    var extendsIndex   = userArgs.indexOf('-e') || userArgs.indexOf('-extends'),
+    let extendsIndex   = userArgs.indexOf('-e') || userArgs.indexOf('-extends'),
         methodsIndex   = userArgs.indexOf('-m') || userArgs.indexOf('-methods'),
         resGen         = {
             fileName : userArgs[0].replace('.js', ''),
@@ -9,16 +9,16 @@ module.exports = function(userArgs) {
 
     if(extendsIndex != -1) { 
 
-        var classExtends = userArgs[extendsIndex + 1];
+        let classExtends = userArgs[extendsIndex + 1];
 
         if(classExtends) resGen.extends = classExtends;
     } 
 
     if(methodsIndex != -1) {
 
-        var classMethods = [];
+        let classMethods = [];
 
-        for (var i = methodsIndex + 1; i < userArgs.length; i++) {
+        for (let i = methodsIndex + 1; i < userArgs.length; i++) {
 
             classMethods.push(userArgs[i]);
         }
