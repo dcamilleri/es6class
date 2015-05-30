@@ -40,7 +40,7 @@ Will generate
 
 ```js
 class MyClass extends ParentClass { ... }
-```
+``
 
 ### Methods
 
@@ -72,7 +72,7 @@ class ClassName {
 
 #### Accessors properties and `static` methods
 
-ES6 Allows you to create accessors properties `get` and `set` and also `static` methods. Create them by prefixing your method name with `get.`, `set.` or `.static`
+ES6 Allows you to create accessors properties `get` and `set` and also `static` methods. Create them by prefixing your method name with `get.` `set.` or `.static`
 
 ``` bash
   $ classgen fileName.js ClassName -m static.doSomething get.name set.name
@@ -84,7 +84,7 @@ ES6 Allows you to create accessors properties `get` and `set` and also `static` 
   $ npm test
 ```
 
-**NOTE:** This is my first NPM published module and CLI Tool. [Feedback](dorian.camilleri@hetic.net) and [Issues](https://github.com/dcamilleri/classgen/issues) will be really appreciated ! Thanks.
+**NOTE:** This is my first NPM published module and CLI Tool. [Feedback](http://twitter.com/DorianCamilleri) and [Issues](https://github.com/dcamilleri/classgen/issues) will be really appreciated ! Thanks.
 
 #### License: MIT
 #### Author: [Dorian Camilleri](https://github.com/dcamilleri)
