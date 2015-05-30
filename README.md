@@ -40,7 +40,7 @@ Will generate
 
 ```js
 class MyClass extends ParentClass { ... }
-``
+```
 
 ### Methods
 
