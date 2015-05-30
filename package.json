@@ -1,5 +1,5 @@
 {
-  "name": "classgen",
+  "name": "es6class",
   "version": "1.0.0",
   "description": "ES6 Command Line Class Generator",
   "preferGlobal": true,
@@ -10,7 +10,7 @@
   "author": "Dorian Camilleri",
   "license": "ISC",
   "bin": {
-    "classgen": "index.js"
+    "es6class": "index.js"
   },
   "dependencies": {
     "fs": "0.0.2",

@@ -1,19 +1,19 @@
-# classgen
+# es6class
 
 ES6 Command Line Class Generator
 
 ## Installation
 
 ``` bash
-  $ npm install -g classgen
+  $ npm install -g es6class
 ```
 
 ## Usage
 
-`classgen` allows you to generate EcmaScript 6 class files really fast with the command line.
+`es6class` allows you to generate EcmaScript 6 class files really fast with the command line.
 
 ``` bash
-  $ classgen file.js MyClass 
+  $ es6class file.js MyClass 
 ```
 
 This will generate a JavaScript ES6 file called `file.js` with the following code.
@@ -33,7 +33,7 @@ class MyClass {
 To implement class inheritance, use `-e` option
 
 ``` bash
-  $ classgen file.js MyClass -e ParentClass
+  $ es6class file.js MyClass -e ParentClass
 ```
 
 Will generate
@@ -47,7 +47,7 @@ class MyClass extends ParentClass { ... }
 You can specify methods to implement with `-m`, each method separated by a space.
 
 ``` bash
-  $ classgen fileName.js ClassName -m doSomething doSomethingElse
+  $ es6class fileName.js ClassName -m doSomething doSomethingElse
 ```
 
 Will output the following:
@@ -75,7 +75,7 @@ class ClassName {
 ES6 Allows you to create accessors properties `get` and `set` and also `static` methods. Create them by prefixing your method name with `get.` `set.` or `.static`
 
 ``` bash
-  $ classgen fileName.js ClassName -m static.doSomething get.name set.name
+  $ es6class fileName.js ClassName -m static.doSomething get.name set.name
 ```
 
 Output
@@ -108,7 +108,7 @@ class ClassName {
   $ npm test
 ```
 
-**NOTE:** This is my first NPM published module and CLI Tool. [Feedback](http://twitter.com/DorianCamilleri) and [Issues](https://github.com/dcamilleri/classgen/issues) will be really appreciated ! Thanks.
+**NOTE:** This is my first NPM published module and CLI Tool. [Feedback](http://twitter.com/DorianCamilleri) and [Issues](https://github.com/dcamilleri/es6class/issues) will be really appreciated ! Thanks.
 
 #### License: MIT
 #### Author: [Dorian Camilleri](https://github.com/dcamilleri)
