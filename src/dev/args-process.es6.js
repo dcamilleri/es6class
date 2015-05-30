@@ -1,11 +1,28 @@
 module.exports = function(userArgs) {
 
+    function generateError(message) {
+        console.log(message);
+        process.exit(1);
+    }
+
+    if(userArgs.length === 0) {
+        generateError('Error: You must specify arguments');
+    }
+
     let extendsIndex   = userArgs.indexOf('-e') || userArgs.indexOf('-extends'),
         methodsIndex   = userArgs.indexOf('-m') || userArgs.indexOf('-methods'),
         resGen         = {
             fileName : userArgs[0].replace('.js', ''),
             name     : userArgs[1]
         };
+
+    if(!resGen.name) {
+        generateError('Error: You must specify a name for your class');
+    }
+
+    if(resGen.name === 'class') {
+        generateError('Error: class is reserved keyword.');
+    }
 
     if(extendsIndex != -1) { 
 

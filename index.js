@@ -7,7 +7,7 @@ var fs          = require('fs'),
 fs.writeFile(resGen.fileName + '.js', classString, function (err) {
 
     if(err) {
-        console.log('An error occured saving your file.');
+        console.log('Error: An error occured saving your file.');
         process.exit(1);
     }
 
