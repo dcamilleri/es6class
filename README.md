@@ -78,6 +78,30 @@ ES6 Allows you to create accessors properties `get` and `set` and also `static` 
   $ classgen fileName.js ClassName -m static.doSomething get.name set.name
 ```
 
+Output
+
+```js
+class ClassName {
+    
+    constructor(options) {
+
+    }
+
+    static doSomething() {
+
+    }
+
+    get name() {
+
+    }
+
+    set name() {
+
+    }
+
+}
+```
+
 ## Run Tests
 
 ``` bash
