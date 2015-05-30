@@ -16,6 +16,10 @@ module.exports = function(userArgs) {
             name     : userArgs[1]
         };
 
+    if(extendsIndex != -1 && methodsIndex != -1 && methodsIndex < extendsIndex) {
+        generateError('Error: You must specify methods at the end of your command');
+    }
+
     if(!resGen.name) {
         generateError('Error: You must specify a name for your class');
     }

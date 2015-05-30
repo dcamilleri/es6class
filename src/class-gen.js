@@ -5,7 +5,7 @@ var methodPrefixer = require('./utils/method-prefixer');
 module.exports = function (options) {
 
     var name = options.name,
-        extd = options['extends'] ? 'extends ' + options['extends'] : '',
+        extd = options['extends'] ? ' extends ' + options['extends'] : '',
         methods = options.methods ? generateMethods(options.methods) : '';
 
     function generateMethods(methods) {
@@ -42,5 +42,5 @@ module.exports = function (options) {
         return methodsString;
     }
 
-    return 'class ' + name + ' ' + extd + ' {\n\n    constructor(options) {\n\n    }' + methods + ' \n\n}';
+    return 'class ' + name + '' + extd + ' {\n\n    constructor(options) {\n\n    }' + methods + '\n\n}';
 };
